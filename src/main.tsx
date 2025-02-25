@@ -1,10 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router";
+import HomePage from "./pages";
+import RootLayout from "./pages/layouts/RootLayout";
+import PlannerIndex from "./pages/planner";
+import FridgeIndex from "./pages/fridge";
+import RecipesIndex from "./pages/recipes";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById("root")!).render(
+	<BrowserRouter>
+		<Routes>
+			<Route path="/" element={<RootLayout />}>
+				<Route index element={<HomePage />} />
+				<Route path="planner" element={<PlannerIndex />} />
+				<Route path="fridge" element={<FridgeIndex />} />
+				<Route path="recipes" element={<RecipesIndex />} />
+			</Route>
+		</Routes>
+	</BrowserRouter>
+);
