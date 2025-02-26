@@ -6,7 +6,7 @@ function RootLayout() {
 	return (
 		<>
 			<NavBar />
-			<main>
+			<main className="flex flex-1 flex-col items-center overlay-hidden">
 				<Outlet />
 			</main>
 		</>
