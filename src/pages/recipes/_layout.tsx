@@ -9,7 +9,7 @@ export default function RecipeLayout() {
 					Search for recipes
 				</h2>
 				<input
-					className="flex-2 text-zinc-950/50 dark:text-zinc-400"
+					className="flex-2 text-zinc-950/50 dark:text-zinc-400 "
 					placeholder="Search..."
 				/>
 				<div className="flex-1">Filters</div>
